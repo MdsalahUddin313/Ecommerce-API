@@ -1,0 +1,2616 @@
+{
+	"info": {
+		"_postman_id": "e1971ba8-efcc-4850-be35-596228a688fa",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19182896"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "User register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"farhan\",\r\n    \"email\": \"farhan@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"role\": \"customer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"farhan\",\r\n    \"email\": \"farhan@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"role\": \"customer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"nabid\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"nabid\",\r\n    \"password\" : \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User update",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"abu bak\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/628f8762c9d5acc96c3b2728",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"628f8762c9d5acc96c3b2728"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4NzYyYzlkNWFjYzk2YzNiMjcyOCIsImlhdCI6MTY1NDM2MDA1NywiZXhwIjoxNjU0NjE5MjU3fQ.4_KEXH1NLUjB9TpzXILSKbM64O-UfStUCAHVH7TKM0c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4NzYyYzlkNWFjYzk2YzNiMjcyOCIsImlhdCI6MTY1NDM5MDM1MCwiZXhwIjoxNjU0NjQ5NTUwfQ.eIRN_LHgn_vHHpSmDK8DUx0jTuZLQ8iyxLsRmbh6ha0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/find/628f8762c9d5acc96c3b2728",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"find",
+								"628f8762c9d5acc96c3b2728"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4NzYyYzlkNWFjYzk2YzNiMjcyOCIsImlhdCI6MTY1NDM2MDA1NywiZXhwIjoxNjU0NjE5MjU3fQ.4_KEXH1NLUjB9TpzXILSKbM64O-UfStUCAHVH7TKM0c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWI5MWExZGVmNWNhYzFhNzk3ZDZlMSIsImlhdCI6MTY1NDM5MDY0MywiZXhwIjoxNjU0NjQ5ODQzfQ._6gegG89gpZwA9ph7o6H-uaeAJLNIJ-F4gutrWTl7qs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/dl/629b91a1def5cac1a797d6e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"dl",
+								"629b91a1def5cac1a797d6e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All User List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4NzYyYzlkNWFjYzk2YzNiMjcyOCIsImlhdCI6MTY1NDM2MDA1NywiZXhwIjoxNjU0NjE5MjU3fQ.4_KEXH1NLUjB9TpzXILSKbM64O-UfStUCAHVH7TKM0c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM2MTYzOCwiZXhwIjoxNjU0NjIwODM4fQ.hRVJZyUeIcYMi8QVJAKjRu0nRGDfqlaPm4CB7kDNrTI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "GET All Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/product/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "806"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"326-7PM9AIUtNy6KmBbqy/rEVpSuYQ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 02:25:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"629c9bc6bb97c841222ff96f\",\n        \"title\": \"title five\",\n        \"description\": \"description for four\",\n        \"img\": \"image link 4\",\n        \"categories\": [\n            \"2\",\n            \"4\",\n            \"asd\"\n        ],\n        \"size\": \"4\",\n        \"color\": \"black\",\n        \"price\": \"5\",\n        \"createdAt\": \"2022-06-05T12:04:22.841Z\",\n        \"updatedAt\": \"2022-06-05T12:04:22.841Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"629c9c0321f3fea80f189ede\",\n        \"title\": \"title six\",\n        \"description\": \"description for four\",\n        \"img\": \"image link 4\",\n        \"categories\": [\n            \"2\",\n            \"4\",\n            \"asd\"\n        ],\n        \"size\": \"4\",\n        \"color\": \"black\",\n        \"price\": \"5\",\n        \"createdAt\": \"2022-06-05T12:05:24.007Z\",\n        \"updatedAt\": \"2022-06-05T12:05:24.007Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"629cc75effb73d647e39bbb3\",\n        \"title\": \"edited title\",\n        \"description\": \"description for four\",\n        \"img\": \"image link 4\",\n        \"categories\": [\n            \"2\",\n            \"4\",\n            \"asd\"\n        ],\n        \"size\": \"4\",\n        \"color\": \"black\",\n        \"price\": \"5\",\n        \"createdAt\": \"2022-06-05T15:10:22.919Z\",\n        \"updatedAt\": \"2022-06-07T01:55:02.080Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET Single Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/629c9bc6bb97c841222ff96f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"629c9bc6bb97c841222ff96f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET Single Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/629c9bc6bb97c841222ff96f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"629c9bc6bb97c841222ff96f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10b-S/kTeR/2RIpih0VJ3VxduV8S07g\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 02:24:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"629c9bc6bb97c841222ff96f\",\n    \"title\": \"title five\",\n    \"description\": \"description for four\",\n    \"img\": \"image link 4\",\n    \"categories\": [\n        \"2\",\n        \"4\",\n        \"asd\"\n    ],\n    \"size\": \"4\",\n    \"color\": \"black\",\n    \"price\": \"5\",\n    \"createdAt\": \"2022-06-05T12:04:22.841Z\",\n    \"updatedAt\": \"2022-06-05T12:04:22.841Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "ADD New Products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"title\": \"Iphone12 max pro\",\r\n        \"description\": \"description for four\",\r\n        \"img\": \"image link iphone\",\r\n        \"categories\": [\r\n            \"electronics\",\r\n            \"mobile\"\r\n        ],\r\n        \"size\": \"6.12\",\r\n        \"color\": \"black\",\r\n        \"price\": \"$400\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/addproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"addproduct"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD New Products without authentication",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"title\": \"Iphone12 max pro\",\r\n        \"description\": \"description for four\",\r\n        \"img\": \"image link iphone\",\r\n        \"categories\": [\r\n            \"electronics\",\r\n            \"mobile\"\r\n        ],\r\n        \"size\": \"6.12\",\r\n        \"color\": \"black\",\r\n        \"price\": \"$400\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/addproduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"addproduct"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-fiSCzlv7N0W1hlfQUT3vnqyLbAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 02:36:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"You are not authenticated!\""
+						},
+						{
+							"name": "ADD New Products successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"title\": \"Iphone12 max pro\",\r\n        \"description\": \"description for four\",\r\n        \"img\": \"image link iphone\",\r\n        \"categories\": [\r\n            \"electronics\",\r\n            \"mobile\"\r\n        ],\r\n        \"size\": \"6.12\",\r\n        \"color\": \"black\",\r\n        \"price\": \"$400\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/addproduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"addproduct"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "293"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"125-UkSoHTDr1HlaicIhdxbrTfrcNoc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 02:37:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Iphone12 max pro\",\n    \"description\": \"description for four\",\n    \"img\": \"image link iphone\",\n    \"categories\": [\n        \"electronics\",\n        \"mobile\"\n    ],\n    \"size\": \"6.12\",\n    \"color\": \"black\",\n    \"price\": \"$400\",\n    \"_id\": \"629eb9e329ae84114a1c30a3\",\n    \"createdAt\": \"2022-06-07T02:37:23.695Z\",\n    \"updatedAt\": \"2022-06-07T02:37:23.695Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"edited title\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/629cc75effb73d647e39bbb3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"629cc75effb73d647e39bbb3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"edited title\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/629cc75effb73d647e39bbb3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"629cc75effb73d647e39bbb3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10d-k5iOeCTbY8XqBPbdeHdxq2iXFPg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 02:25:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"629cc75effb73d647e39bbb3\",\n    \"title\": \"edited title\",\n    \"description\": \"description for four\",\n    \"img\": \"image link 4\",\n    \"categories\": [\n        \"2\",\n        \"4\",\n        \"asd\"\n    ],\n    \"size\": \"4\",\n    \"color\": \"black\",\n    \"price\": \"5\",\n    \"createdAt\": \"2022-06-05T15:10:22.919Z\",\n    \"updatedAt\": \"2022-06-07T02:25:25.381Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Products",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/product/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Products without authintication",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/product/629c9c0321f3fea80f189ede",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"629c9c0321f3fea80f189ede"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-fiSCzlv7N0W1hlfQUT3vnqyLbAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 02:29:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"You are not authenticated!\""
+						},
+						{
+							"name": "DELETE Products successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/product/629c9c0321f3fea80f189ede",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"629c9c0321f3fea80f189ede"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-X6rEV0bLAd3XWSlCUpLv7GVJ4sE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 02:29:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Product Deleted Successfully......\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order List",
+			"item": [
+				{
+					"name": "GET Order Items",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/order/629f066c897a2c0be50e3bb0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"order",
+								"629f066c897a2c0be50e3bb0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET Order Items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/order/629f066c897a2c0be50e3bb0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"629f066c897a2c0be50e3bb0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"158-XSAIOZAgM9kCq4XUht0C7FL+cUk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 08:06:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"629f066c897a2c0be50e3bb0\",\n    \"userId\": \"629c95e930b067f94a5ba0bc\",\n    \"products\": [\n        {\n            \"productId\": \"629eb9e329ae84114a1c30a3\",\n            \"quantity\": 1,\n            \"_id\": \"629f066c897a2c0be50e3bb1\"\n        }\n    ],\n    \"amount\": \"50\",\n    \"address\": \"Block B ,wall street\",\n    \"status\": \"paid\",\n    \"payment_method\": \"bkash\",\n    \"createdAt\": \"2022-06-07T08:03:56.978Z\",\n    \"updatedAt\": \"2022-06-07T08:03:56.978Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "ADD New OrderItems",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"userId\": \"born for delete\",\r\n    \"products\": [\r\n        {\"productId\":\"bfd\",\r\n        \"quantity\":1\r\n        }\r\n    ],\r\n    \"amount\": \"50\",\r\n    \"address\":\"Block B ,wall street\",\r\n    \"status\":\"paid\",\r\n    \"payment_method\": \"bkash\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/order/addOrder/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"order",
+								"addOrder",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD New OrderItems without authintication",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \"userId\": \"req.body.userId\",\r\n    \"products\": [\r\n        {\"productId\":\"req.body.products\",\r\n        \"quantity\":5\r\n        }\r\n    ],\r\n    \"amount\": \"req.body.amount\",\r\n    \"address\":\"req.body.address\",\r\n    \"status\":\"req.body.status\",\r\n    \"payment_method\": \"req.body.payment_method\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/order/addOrder/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"addOrder",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-fiSCzlv7N0W1hlfQUT3vnqyLbAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 07:56:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"You are not authenticated!\""
+						},
+						{
+							"name": "ADD New OrderItems",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \"userId\": \"629c95e930b067f94a5ba0bc\",\r\n    \"products\": [\r\n        {\"productId\":\"629eb9e329ae84114a1c30a3\",\r\n        \"quantity\":1\r\n        }\r\n    ],\r\n    \"amount\": \"50\",\r\n    \"address\":\"Block B ,wall street\",\r\n    \"status\":\"paid\",\r\n    \"payment_method\": \"bkash\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/order/addOrder/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"addOrder",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"158-5lzVhjl3jmcHmNOGP8z+Ml6aFHM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 08:03:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": \"629c95e930b067f94a5ba0bc\",\n    \"products\": [\n        {\n            \"productId\": \"629eb9e329ae84114a1c30a3\",\n            \"quantity\": 1,\n            \"_id\": \"629f066c897a2c0be50e3bb1\"\n        }\n    ],\n    \"amount\": \"50\",\n    \"address\": \"Block B ,wall street\",\n    \"status\": \"paid\",\n    \"payment_method\": \"bkash\",\n    \"_id\": \"629f066c897a2c0be50e3bb0\",\n    \"createdAt\": \"2022-06-07T08:03:56.978Z\",\n    \"updatedAt\": \"2022-06-07T08:03:56.978Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "ADD New OrderItems",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \"userId\": \"629c95e930b067f94a5ba0bc\",\r\n    \"products\": [\r\n        {\"productId\":\"629eb9e329ae84114a1c30a3\",\r\n        \"quantity\":1\r\n        }\r\n    ],\r\n    \"amount\": \"50\",\r\n    \"address\":\"Block B ,wall street\",\r\n    \"status\":\"paid\",\r\n    \"payment_method\": \"bkash\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/order/addOrder/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"addOrder",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"158-5lzVhjl3jmcHmNOGP8z+Ml6aFHM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 08:03:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": \"629c95e930b067f94a5ba0bc\",\n    \"products\": [\n        {\n            \"productId\": \"629eb9e329ae84114a1c30a3\",\n            \"quantity\": 1,\n            \"_id\": \"629f066c897a2c0be50e3bb1\"\n        }\n    ],\n    \"amount\": \"50\",\n    \"address\": \"Block B ,wall street\",\n    \"status\": \"paid\",\n    \"payment_method\": \"bkash\",\n    \"_id\": \"629f066c897a2c0be50e3bb0\",\n    \"createdAt\": \"2022-06-07T08:03:56.978Z\",\n    \"updatedAt\": \"2022-06-07T08:03:56.978Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "EDIT OrderItems",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/order/629f066c897a2c0be50e3bb0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"order",
+								"629f066c897a2c0be50e3bb0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "EDIT OrderItems",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\":20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/order/629f066c897a2c0be50e3bb0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"629f066c897a2c0be50e3bb0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"158-KdyLM3AK27jFKPz4yw3GJjt8MHk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 08:08:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"629f066c897a2c0be50e3bb0\",\n    \"userId\": \"629c95e930b067f94a5ba0bc\",\n    \"products\": [\n        {\n            \"productId\": \"629eb9e329ae84114a1c30a3\",\n            \"quantity\": 1,\n            \"_id\": \"629f066c897a2c0be50e3bb1\"\n        }\n    ],\n    \"amount\": \"20\",\n    \"address\": \"Block B ,wall street\",\n    \"status\": \"paid\",\n    \"payment_method\": \"bkash\",\n    \"createdAt\": \"2022-06-07T08:03:56.978Z\",\n    \"updatedAt\": \"2022-06-07T08:08:54.783Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Order Items",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/order/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"order",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Order Items",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/order/629f066c897a2c0be50e3bb0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"629f066c897a2c0be50e3bb0"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-fiSCzlv7N0W1hlfQUT3vnqyLbAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 08:10:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"You are not authenticated!\""
+						},
+						{
+							"name": "DELETE Order Items",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/order/629f082e897a2c0be50e3bb5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"629f082e897a2c0be50e3bb5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-MaUpTYe/PxEYwo90/zWuG68QvLY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 08:11:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Product Order Deleted Successfully......\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "ADD Categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"born for deleted\",\r\n    \"sub_categories\": [\r\n        \"d1\",\r\n        \"s2\",\r\n        \"ow3\"        \r\n    ],\r\n    \"logos\": \"born logo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/categories/addcategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								"addcategories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD Categories successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Electronics\",\r\n    \"sub_categories\": [\r\n        \"mobile\",\r\n        \"laptop\",\r\n        \"monitor\",\r\n        \"AC\"\r\n    ],\r\n    \"logos\": \"electronics logo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories/addcategories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"addcategories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "221"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dd-2V7MZZJwR/GpemHBWaMfhXe5JRk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 03:34:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Electronics\",\n    \"sub_categories\": [\n        \"mobile\",\n        \"laptop\",\n        \"monitor\",\n        \"AC\"\n    ],\n    \"logos\": \"electronics logo\",\n    \"_id\": \"629ec74a6194f5664963e72c\",\n    \"createdAt\": \"2022-06-07T03:34:34.193Z\",\n    \"updatedAt\": \"2022-06-07T03:34:34.193Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ALL Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET ALL Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/categories/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-cm5Y5/x3R3Uugm6tX2djilqBwRM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 03:37:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"629ec74a6194f5664963e72c\",\n        \"title\": \"Electronics\",\n        \"sub_categories\": [\n            \"mobile\",\n            \"laptop\",\n            \"monitor\",\n            \"AC\"\n        ],\n        \"logos\": \"electronics logo\",\n        \"createdAt\": \"2022-06-07T03:34:34.193Z\",\n        \"updatedAt\": \"2022-06-07T03:34:34.193Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "DELETE Categories",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/categories/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Categories",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories/629ec93c6194f5664963e736",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"629ec93c6194f5664963e736"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-4cpzoilq28+sAG6jJGevuC/6wMY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 03:44:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Product categories Deleted Successfully......\""
+						}
+					]
+				},
+				{
+					"name": "UPDATE Categories",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Electronics updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/categories/629ec74a6194f5664963e72c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								"629ec74a6194f5664963e72c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE Categories categories",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Electronics updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories/629ec74a6194f5664963e72c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"629ec74a6194f5664963e72c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "229"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e5-kw7vNeYw+IrGj7k9KeJdE3feW2Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 03:47:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"629ec74a6194f5664963e72c\",\n    \"title\": \"Electronics updated\",\n    \"sub_categories\": [\n        \"mobile\",\n        \"laptop\",\n        \"monitor\",\n        \"AC\"\n    ],\n    \"logos\": \"electronics logo\",\n    \"createdAt\": \"2022-06-07T03:34:34.193Z\",\n    \"updatedAt\": \"2022-06-07T03:47:23.175Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reviewes",
+			"item": [
+				{
+					"name": "ADD review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"629c963030b067f94a5ba0c2as\",\r\n    \"product\": \"629c9bc6bb97c841222ff96fas\",\r\n    \"review_description\": \"this product is a bad product ,this is fraud...\",\r\n    \"image\": \"link of images(imogi,image,gif and many more...)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/reviews/addreviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reviews",
+								"addreviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD Categories successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Electronics\",\r\n    \"sub_categories\": [\r\n        \"mobile\",\r\n        \"laptop\",\r\n        \"monitor\",\r\n        \"AC\"\r\n    ],\r\n    \"logos\": \"electronics logo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories/addcategories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"addcategories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "221"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dd-2V7MZZJwR/GpemHBWaMfhXe5JRk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 03:34:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Electronics\",\n    \"sub_categories\": [\n        \"mobile\",\n        \"laptop\",\n        \"monitor\",\n        \"AC\"\n    ],\n    \"logos\": \"electronics logo\",\n    \"_id\": \"629ec74a6194f5664963e72c\",\n    \"createdAt\": \"2022-06-07T03:34:34.193Z\",\n    \"updatedAt\": \"2022-06-07T03:34:34.193Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "ADD review",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"629c963030b067f94a5ba0c2as\",\r\n    \"product\": \"629c9bc6bb97c841222ff96fas\",\r\n    \"review_description\": \"this product is a bad product ,this is fraud...\",\r\n    \"image\": \"link of images(imogi,image,gif and many more...)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/reviews/addreviews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"reviews",
+										"addreviews"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"145-lkdU9eevDifq+X+y/aBSqDSIuA4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 11:37:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": \"629c963030b067f94a5ba0c2as\",\n    \"product\": \"629c9bc6bb97c841222ff96fas\",\n    \"review_description\": \"this product is a bad product ,this is fraud...\",\n    \"image\": \"link of images(imogi,image,gif and many more...)\",\n    \"_id\": \"629f3891ab0b8d6c0bd711e0\",\n    \"createdAt\": \"2022-06-07T11:37:53.995Z\",\n    \"updatedAt\": \"2022-06-07T11:37:53.995Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ALL reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/reviews/629f3836674bd8e498f65bcd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reviews",
+								"629f3836674bd8e498f65bcd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET ALL reviews",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/reviews/629f3836674bd8e498f65bcd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"reviews",
+										"629f3836674bd8e498f65bcd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "332"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14c-e92ZyIjZpBRzIHNMoHbdLeDMg68\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 11:45:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"629f3836674bd8e498f65bcd\",\n    \"user\": \"629c963030b067f94a5ba0c2\",\n    \"product\": \"629c9bc6bb97c841222ff96f\",\n    \"review_description\": \"It is a great product and this product looking so great...\",\n    \"image\": \"link of images(imogi,image,gif and many more...)\",\n    \"createdAt\": \"2022-06-07T11:36:22.127Z\",\n    \"updatedAt\": \"2022-06-07T11:36:22.127Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE reviews",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/categories/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE reviews",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review_description\": \"updated reviews\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/reviews/629f3ae9716b8c78c307434e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reviews",
+								"629f3ae9716b8c78c307434e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPDATE reviews",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"review_description\": \"updated reviews\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/reviews/629f3ae9716b8c78c307434e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"reviews",
+										"629f3ae9716b8c78c307434e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"126-O6kgGhD+nCBhFrMrTLNYL8c/WsE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 11:50:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"629f3ae9716b8c78c307434e\",\n    \"user\": \"629c963030b067f94a5bwsc2as\",\n    \"product\": \"629c9bc6aas97c841222ff96fas\",\n    \"review_description\": \"updated reviews\",\n    \"image\": \"link of images(imogi,image,gif and many more...)\",\n    \"createdAt\": \"2022-06-07T11:47:53.633Z\",\n    \"updatedAt\": \"2022-06-07T11:50:56.234Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart Items",
+			"item": [
+				{
+					"name": "ADD CartItems",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"628f8762c9asdac96c3b2728\",\r\n    \"products\": [\r\n       { \"productId\":\"asdca785as6dxxc6\",\r\n          \"quantity\":5\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/cartItems/addCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"cartItems",
+								"addCart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD CartItems",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM1Njc4MiwiZXhwIjoxNjU0NjE1OTgyfQ.vQuAwmcww9dyYuTIeNobcr29h-gMV44mqB9g4wAwam0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"628f8762c9asdac96c3b2728\",\r\n    \"products\": [\r\n       { \"productId\":\"asdca785as6dxxc6\",\r\n          \"quantity\":5\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/cartItems/addCart",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cartItems",
+										"addCart"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-zDm4zV/mMrLLg/JcugphD8SJEVw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Jun 2022 12:13:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": \"628f8762c9asdac96c3b2728\",\n    \"products\": [],\n    \"_id\": \"629f40dd963a325546dc69fd\",\n    \"createdAt\": \"2022-06-07T12:13:17.538Z\",\n    \"updatedAt\": \"2022-06-07T12:13:17.538Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "GET CartItems",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CartItems",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CartItems",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search Items",
+			"item": [
+				{
+					"name": "POST SearchItems",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGY4MmQxYjIzMjBkN2FmZTI2NGUxMCIsImlhdCI6MTY1NDM2MTYzOCwiZXhwIjoxNjU0NjIwODM4fQ.hRVJZyUeIcYMi8QVJAKjRu0nRGDfqlaPm4CB7kDNrTI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"45as26w4as\",\r\n    \"searchItems\": \"req.body.product\",\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/searchItems/addSearchItems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"searchItems",
+								"addSearchItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SearchItems",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE SearchItems",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
